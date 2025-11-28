@@ -1,0 +1,78 @@
+body{
+	background: #f4f6fc;           /* warna latar halaman */
+	display: flex;                 /* center konten horizontal */
+	justify-content: center;       /* posisikan card di tengah */
+	padding: 40px;                 /* jarak tepi body */
+	font-family: Arial, sans-serif;/* font umum */
+}
+
+.card{
+	width: 95%;                    /* lebar card responsif */
+	max-width: 450px;              /* batas lebar max */
+	background: #ffffff;           /* latar putih */
+	padding: 24px;                 /* ruang dalam card */
+	border-radius: 12px;           /* sudut membulat */
+	box-shadow: 0px 4px 12px;      /* bayangan card */
+}
+
+.title{
+	font-size: 20px;               /* ukuran judul */
+	font-weight: bold;             /* tebal */
+	margin-bottom: 20px;           /* jarak bawah judul */
+}
+
+.form-group{
+	margin-bottom: 16px;           /* jarak antar form group */
+}
+
+label{
+	font-size: 14px;               /* ukuran label */
+	font-weight: 600;              /* label agak tebal */
+	color: #333;                   /* warna teks label */
+	margin-bottom: 6px;            /* jarak label ke input */
+	display: block;                /* label satu baris sendiri */
+}
+
+input{
+	width: 100%;                   /* input full lebar card */
+	padding: 12px;                 /* ruang dalam input */
+	border-radius: 8px;            /* sudut input membulat */
+	border: 1px solid #d6d6d6;     /* garis tepi input */
+	font-size: 14px;               /* ukuran teks input */
+	box-sizing: border-box;        /* padding masuk hitungan width */
+}
+
+input:focus{
+	border-color: #6a67ce;         /* warna border saat fokus */
+	outline: none;                 /* hilangkan outline biru default */
+}
+
+button{
+	width: 100%;                   /* tombol full lebar card */
+	padding: 12px;                 /* tinggi tombol */
+	background: #e6a229;           /* warna oranye tombol */
+	color: white;                  /* teks tombol putih */
+	border: none;                  /* tanpa border */
+	border-radius: 8px;            /* sudut membulat */
+	font-size: 15px;               /* ukuran teks tombol */
+	font-weight: bold;             /* teks tebal */
+	cursor: pointer;               /* cursor tangan */
+	margin-top: 10px;              /* jarak atas tombol */
+}
+
+button:hover{
+	background: #f0b838;           /* warna tombol saat hover */
+}
+
+.hasil-text{
+	font-size: 16px;               /* ukuran teks total */
+	margin-top: 16px;              /* jarak atas total */
+	font-weight: 600;              /* agak tebal */
+}
+
+.header-img{
+	width: 100%;                   /* gambar lebar penuh card */
+	border-radius: 10px;           /* sudut gambar membulat */
+	margin-bottom: 20px;           /* jarak ke form */
+	object-fit: cover;             /* gambar isi penuh tanpa gepeng */
+}

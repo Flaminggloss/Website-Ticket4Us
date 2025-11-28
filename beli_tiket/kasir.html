@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!-- pakai HTML5 -->
+<html>
+<head>
+	<meta charset="utf-8"> <!-- set encoding -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- biar responsif -->
+	<title>Pembelian Tiket</title> <!-- judul tab -->
+	<link rel="stylesheet" type="text/css" href="kasir_style.css"> <!-- hubungkan CSS -->
+	<script type="text/javascript" src="kasir_data.js"></script> <!-- hubungkan JS -->
+</head> 
+<body>
+
+<div class="card"> <!-- kotak utama form -->
+	<img src="logo.png" class="header-img" alt="Header"> <!-- gambar header -->
+
+	<div class="form-group"> <!-- group input nama -->
+		<label>Nama Customer</label> <!-- label nama -->
+		<input type="text" id="nama"> <!-- input nama -->
+	</div>
+
+	<div class="form-group"> <!-- group input event -->
+		<label>Nama Event</label> <!-- label event -->
+		<input type="text" id="barang"> <!-- input event -->
+	</div>
+
+	<div class="form-group"> <!-- group input qty -->
+		<label>Quantity</label> <!-- label qty -->
+		<input type="number" id="qty"> <!-- input qty -->
+	</div>
+
+	<div class="form-group"> <!-- group input harga -->
+		<label>Harga Tiket</label> <!-- label harga -->
+		<input type="number" id="harga"> <!-- input harga -->
+	</div>
+
+	<button onclick="kasir()">Proses</button> <!-- tombol hitung total -->
+	<button onclick="window.location.href='../home.html'">Kembali</button> <!-- tombol kembali ke home -->
+	
+	<p class="hasil-text">Total: <span id="hasil">0</span></p> <!-- tempat tampil total -->
+</div>
+
+</body>
+</html>

@@ -1,0 +1,307 @@
+*{
+  padding: 3px;              /* reset padding semua elemen */
+  margin: 3px;               /* reset margin semua elemen */
+  box-sizing: border-box;    /* hitung width termasuk padding */
+}
+ 
+body{
+  background-color: white;   /* latar belakang halaman putih */
+}
+
+.layout-logojudul{
+  display: flex;             /* untuk mengatur isi secara fleksibel */
+  align-items: center;       /* vertikal tengah */
+}
+
+.layout-logojudul img{
+  width: 230px;              /* lebar logo */
+  height: 90px;              /* tinggi logo */
+}
+
+.layout-logojudul h3{
+  font-family: Bahnschrift SemiBold; /* font judul (jika dipakai) */
+}
+
+nav ul{
+  display: flex;             /* menu berderet horizontal */
+  align-items: center;       /* rata tengah vertikal */
+  list-style: none;          /* hilangkan bullet list */
+}
+
+nav ul li a{
+  text-decoration: none;     /* hilangkan garis bawah link */
+  font-family: Bahnschrift SemiBold; /* font menu */
+  color: black;              /* warna teks menu */
+}
+
+nav ul li a:hover{
+  color: blue;               /* warna menu saat hover */
+}
+
+/* HEADER ATAS */
+
+.header-atas{
+  display: flex;             /* header isi kiri-kanan */
+  justify-content: space-between; /* logo kiri, menu kanan */
+  align-items: center;       /* tengah vertikal */
+  position: sticky;          /* menempel di atas saat scroll */
+  top: 0;                    /* posisi nempel atas */
+  background-color: white;   /* latar header putih */
+}
+
+/* SLIDE FOTO HALAMAN 1 */
+
+.halaman1{
+  width: 100%;               /* penuh lebar layar */
+  height: 680px;             /* tinggi area slide */
+  background-image: url("miko.jpeg"); /* gambar awal */
+  animation: bombo 30s infinite;      /* jalanin animasi bombo 30 detik loop */
+  background-size: cover;    /* gambar menutupi area */
+  background-position: center; /* posisi tengah */
+  background-repeat: no-repeat; /* tidak diulang */
+  cursor: default;           /* kursor standar */
+}
+
+@keyframes bombo{            /* animasi ganti background halaman1 */
+  0%{
+    background-image: url("miko.jpeg");
+  }
+  20%{
+    background-image: url("cf21.jpeg");
+  }
+  40%{
+    background-image: url("hololive.jpeg");
+  }
+  60%{
+    background-image: url("hololive2.jpeg");
+  }
+  80%{
+    background-image: url("miku.jpeg");
+  }
+  100%{
+    background-image: url("miko.jpeg");
+  }
+}
+
+/* HALAMAN 2 (TENTANG) */
+
+.halaman2{
+  width: 100%;               /* penuh lebar */
+  height: 680px;             /* tinggi section */
+  background-color: black;   /* latar hitam */
+  display: flex;             /* bagi jadi dua kolom */
+  align-items: center;       /* tengah vertikal */
+  cursor: default;           /* kursor standar */
+}
+
+.halaman3{
+  width: 100%;               /* penuh lebar */
+  height: 680px;             /* tinggi section */
+  background-color: #6989ff; /* latar biru */
+  display: flex;             /* layout dua kolom */
+  align-items: center;       /* tengah vertikal */
+}
+
+/* HALAMAN 4 (MEDIA) */
+
+.halaman4{
+  width: 100%;               /* penuh lebar */
+  height: 680px;             /* tinggi section */
+  background-color: dimgray; /* latar abu tua */
+  display: flex;             /* layout kolom */
+  flex-direction: column;    /* susun vertikal */
+  justify-content: center;   /* tengah vertikal */
+  align-items: center;       /* tengah horizontal */
+}
+
+/* HALAMAN 5 (SOSMED) */
+
+.halaman5{
+  width: 100%;               /* penuh lebar */
+  height: 680px;             /* tinggi section */
+  background-color: darkgrey;/* latar abu */
+  display: flex;             /* layout kolom */
+  flex-direction: column;    /* susun vertikal */
+  justify-content: center;   /* tengah vertikal */
+  align-items: center;       /* tengah horizontal */
+}
+
+.halaman2 .page1{
+  width: 55%;                /* kolom kiri 55% */
+  height: 600px;             /* tinggi kotak */
+  background-color: #c4c4c4; /* latar abu muda */
+  padding: 100px 170px;      /* ruang dalam kotak */
+  box-sizing: border-box;    /* padding masuk hitungan width */
+}
+
+.halaman2 .page2{
+  width: 45%;                /* kolom kanan 45% */
+  height: 600px;             /* tinggi kotak */
+  background-color: #c4c4c4; /* latar abu muda */
+  padding: 150px 10px;       /* ruang dalam kotak */
+  box-sizing: border-box;    /* padding masuk width */
+}
+
+
+.halaman2 .page1 img{
+  width: 200px;              /* lebar logo di halaman2 */
+  height: 100px;             /* tinggi logo */
+  display: flex;             /* (tidak terlalu perlu, tapi ok) */
+}
+
+.halaman2 .page2 p{
+  font-family: Arial;        /* font teks deskripsi */
+  font-size: 25px;           /* ukuran teks */
+  color: #2b2b2b;            /* warna abu gelap */
+  text-align: center;        /* teks rata tengah */
+}
+
+/* HALAMAN 3 (TIKET) */
+
+.halaman3 .page3{
+  width: 55%;                /* kolom kiri 55% */
+  height: 600px;             /* tinggi kolom */
+  background-color: transparent; /* latar transparan */
+  padding: 200px 370px;      /* posisi isi di tengah */
+  box-sizing: border-box;    /* padding masuk width */
+}
+
+.halaman3 .page4{
+  width: 45%;                /* kolom kanan 45% */
+  height: 600px;             /* tinggi kolom */
+  background-color: transparent; /* latar transparan */
+  box-sizing: border-box;    /* padding masuk width */
+  justify-content: center;   /* isi rata tengah horizontal */
+  display: flex;             /* aktifkan flex */
+  align-items: center;       /* isi rata tengah vertikal */
+}
+
+/* SLIDE HARGA DI HALAMAN 3 */
+
+.halaman3 .page3{
+  width: 200px;              /* ukuran kotak harga */
+  height: 100px;
+  display: flex;             /* flex (kalau nanti isi konten) */
+  background-image: url("harga2.jpeg"); /* gambar awal */
+  animation: clat 15s infinite;         /* animasi ganti gambar */
+  background-size: contain;  /* gambar muat tanpa terpotong */
+  background-position: center; /* posisi tengah */
+  background-repeat: no-repeat; /* tidak diulang */
+  cursor: default;           /* kursor standar */
+}
+
+@keyframes clat{             /* animasi harga tiket */
+  0%{
+    background-image: url("harga2.jpeg");
+  }
+  33%{
+    background-image: url("mikuxp.jpeg");
+  }
+  66%{
+    background-image: url("harga1.jpeg");
+  }
+  100%{
+    background-image: url("harga2.jpeg");
+  }
+}
+
+/* JUDUL HALAMAN 4 */
+
+.halaman4 h2{
+  font-size: 28px;           /* ukuran judul */
+  color: #e3e3e3;            /* warna teks abu terang */
+  margin-bottom: 24px;       /* jarak bawah */
+  font-weight: 700;          /* bold */
+}
+
+/* JUDUL HALAMAN 5 */
+
+.halaman5 h2{
+  font-size: 48px;           /* ukuran judul besar */
+  color: black;              /* warna hitam */
+  margin-bottom: 20px;       /* jarak bawah */
+  font-weight: 700;          /* bold */
+}
+
+/* TOMBOL BELI TIKET */
+
+.btn{
+  padding: 20px 30px;        /* ruang dalam tombol */
+  background-color: #e6a229; /* warna oranye logo */
+  color: black;              /* teks hitam */
+  text-decoration: none;     /* hilangkan garis link */
+  border-radius: 8px;        /* sudut membulat */
+  font-size: 36px;           /* teks besar */
+}
+
+.btn:hover{
+  background: #f0b838;       /* warna tombol saat hover */
+}
+
+/* LOGO SOSMED */
+
+.logo_sosmed{
+  display: flex;             /* icon berjajar */
+  gap: 32px;                 /* jarak antar icon */
+}
+
+.logo_sosmed img{
+  width: 120px;              /* ukuran icon */
+  height: 120px;
+}
+
+/* SLIDER FOTO MEDIA */
+
+.foto_media{
+  width: 80%;                /* lebar kotak foto */
+  height: 450px;             /* tinggi kotak foto */
+  border-radius: 16px;       /* sudut membulat */
+  background-image: url("media1.jpeg"); /* gambar awal */
+  animation: fotomedia 18s infinite;    /* animasi ganti foto */
+  background-size: contain;  /* gambar muat tanpa crop */
+  background-position: center; /* posisi tengah */
+  background-repeat: no-repeat; /* tidak diulang */
+}
+
+@keyframes fotomedia{        /* animasi slide media */
+  0%{
+      background-image: url("media1.jpeg");
+  }
+  25%{
+      background-image: url("media2.jpeg");
+  }
+  50%{
+      background-image: url("media3.jpeg");
+  }
+  75%{
+      background-image: url("media4.jpeg");
+  }
+  100%{
+      background-image: url("media1.jpeg");
+  }
+}
+
+/* FOOTER */
+
+footer{
+  width: 100%;               /* penuh lebar */
+  height: 80px;              /* tinggi footer */
+  background-color: #e6a229; /* warna oranye logo */
+  display: flex;             /* isi di tengah */
+  justify-content: center;   /* tengah horizontal */
+  align-items: center;       /* tengah vertikal */
+}
+
+footer p{
+  color: white;              /* teks putih */
+  text-align: center;        /* rata tengah */
+  font-size: 14px;           /* ukuran kecil */
+  line-height: 20px;         /* jarak antar baris */
+  margin: 0;                 /* hilangkan margin default */
+}
+
+/* SCROLL HALUS SAAT CLICK MENU */
+
+html{
+  scroll-behavior: smooth;   /* scroll lembut ke anchor */
+}
